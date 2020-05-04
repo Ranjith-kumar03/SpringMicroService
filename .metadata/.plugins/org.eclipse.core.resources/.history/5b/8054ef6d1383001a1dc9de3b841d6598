@@ -1,0 +1,65 @@
+package com.example.demo.model;
+
+import java.util.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+@Entity(name = "tasks")
+public class Task {
+	@Id
+	@GeneratedValue( strategy = GenerationType.IDENTITY)
+	private int id;
+	private String name;
+	private String description;
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date dateCreated;
+	private boolean finsished;
+	
+	
+	
+	
+	public Task(String name, String description, Date dateCreated, boolean finsished) {
+
+		this.name = name;
+		this.description = description;
+		this.dateCreated = dateCreated;
+		this.finsished = finsished;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	public Date getDateCreated() {
+		return dateCreated;
+	}
+	public void setDateCreated(Date dateCreated) {
+		this.dateCreated = dateCreated;
+	}
+	public boolean isFinsished() {
+		return finsished;
+	}
+	public void setFinsished(boolean finsished) {
+		this.finsished = finsished;
+	}
+	
+
+}

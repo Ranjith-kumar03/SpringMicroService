@@ -1,0 +1,17 @@
+package com.spring.cloud.gateway.paymentservice.entity;
+
+import javax.persistence.Entity;
+
+import com.spring.cloud.gateway.orderservice.entity.Order;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity(name="PAYMENT_TBL" )
+public class Payment {
+
+}

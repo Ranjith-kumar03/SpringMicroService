@@ -1,0 +1,57 @@
+package com.spring.mongo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.kafka.annotation.KafkaListener;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@SpringBootApplication
+@RestController
+public class KafkaConsumerApplication {
+	
+	List<String>messages=new ArrayList<String>();
+	User userFromTopic=null;
+	
+	@GetMapping("/consumeStringMessage")
+	public List<String> consumeMsg()
+	{
+		return messages;
+	}
+	
+	
+	
+	
+	@KafkaListener(groupId = "ranjithkumar-1",topics = "ranjithkumar",containerFactory = "kafkaListenerContainerFactory")
+	public List<String> getMsgFromTopic(String data)
+	{
+		messages.add(data);
+		
+		return messages;
+	}
+	
+	///Listener for JSON Object
+
+	@GetMapping("/consumeStringMessage")
+	public User consumeJsonMsg()
+	{
+		return userFromTopic;
+	}
+	
+	
+	@KafkaListener(groupId = "ranjithkumar-2",topics = "ranjithkumar",containerFactory = "userKafkaListenerContainerFactory")
+	public User getJsonMsgFromTopic(User user)
+	{
+		
+		userFromTopic=user;
+		return userFromTopic;
+	}
+
+	public static void main(String[] args) {
+		SpringApplication.run(KafkaConsumerApplication.class, args);
+	}
+
+}

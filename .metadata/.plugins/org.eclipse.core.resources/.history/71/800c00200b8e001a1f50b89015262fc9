@@ -1,0 +1,5 @@
+package com.spring.cloud.gateway.paymentservice.repository;
+
+public interface PaymentRepository {
+
+}

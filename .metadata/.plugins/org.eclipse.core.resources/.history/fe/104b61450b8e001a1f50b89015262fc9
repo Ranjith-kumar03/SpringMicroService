@@ -1,0 +1,5 @@
+package com.spring.cloud.gateway.paymentservice.service;
+
+public class PaymentService {
+
+}
