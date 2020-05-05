@@ -23,14 +23,13 @@ public class PaymentController {
 	@PostMapping("/dopayment")
 	public Payment doPayment(@RequestBody Payment payment )
 	{
-		System.out.println("Iam getting hooked payment service");
 		return paymentService.doPayment(payment);
 	}
 	
 	@GetMapping("/{orderid}")
 	public Payment findPaymentHistoryByOrderId(@PathVariable int orderid)
 	{
-		return paymentService.findPaymentHistoryByOrderId(orderid);
+		return paymentService.findPaymentHistoryByOrderId(orderid)
 	}
 	
 	

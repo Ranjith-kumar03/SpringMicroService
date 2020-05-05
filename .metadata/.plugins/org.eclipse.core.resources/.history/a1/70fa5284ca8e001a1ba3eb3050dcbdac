@@ -29,10 +29,5 @@ public class PaymentService {
 		return new Random().nextBoolean() ? "sucess":"failure";
 	}
 
-	public Payment findPaymentHistoryByOrderId(int orderid) {
-		// TODO Auto-generated method stub
-		return _paymentRepository.findByorderid(orderid);
-	}
-
 
 }

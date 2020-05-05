@@ -40,7 +40,6 @@ public class OrderService {
 			
 			Payment paymentResponse = restTemplate.postForObject(url, payment, Payment.class);
 			paymentRepository.save(paymentResponse);
-			_orderRepo.save(order);
 			message=paymentResponse.getPaymentStatus().equals("sucess") ? "Transaction happend Sucessfully" : "Transaction Failed or declined";
 			
 		return new TransactionResponse(order,paymentResponse.getAmount(),paymentResponse.getTransactionId(),message);

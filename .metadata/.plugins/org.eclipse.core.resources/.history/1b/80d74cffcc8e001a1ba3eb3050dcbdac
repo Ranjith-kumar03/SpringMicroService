@@ -23,7 +23,7 @@ public class OrderController {
 	@PostMapping("/bookorder")
 	public TransactionResponse bookOrder(@RequestBody TransactionRequest request)
 	{
-		System.out.println("Iam getting hooked order service");
+		
 		return _orderService.saveOrder(request);
 	}
 }
