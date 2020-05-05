@@ -1,0 +1,5 @@
+package com.spring.cloud.gateway.orderservice.common;
+
+public class TransactionResponse {
+
+}

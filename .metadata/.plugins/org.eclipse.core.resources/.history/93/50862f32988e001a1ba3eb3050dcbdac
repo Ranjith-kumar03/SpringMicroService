@@ -1,0 +1,26 @@
+package com.spring.cloud.gateway.orderservice.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.spring.cloud.gateway.orderservice.common.Payment;
+import com.spring.cloud.gateway.orderservice.entity.Order;
+import com.spring.cloud.gateway.orderservice.repository.OrderRepository;
+
+@Service
+public class OrderService {
+	
+	@Autowired
+	private OrderRepository _orderRepo;
+	
+	public Order saveOrder(Order order)
+	{
+		
+		Order order=request.getOrder();
+		Payment payment=request.getPayment();
+		payment.setOrderid(order.getId());
+		payment.setAmount(order.getPrice());
+		return _orderRepo.save(order);
+	}
+
+}

@@ -1,0 +1,8 @@
+package com.spring.cloud.gateway.orderservice.common;
+
+public class TransactionRequest {
+	
+	private Order order;
+	private Payment payment
+
+}

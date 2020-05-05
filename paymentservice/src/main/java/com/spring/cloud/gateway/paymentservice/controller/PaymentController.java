@@ -1,5 +1,7 @@
 package com.spring.cloud.gateway.paymentservice.controller;
 
+import java.util.Random;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -16,10 +18,11 @@ public class PaymentController {
 	@Autowired
 	private PaymentService paymentService;
 	
-	@PostMapping("/doPayment")
+	@PostMapping("/dopayment")
 	public Payment doPayment(@RequestBody Payment payment )
 	{
 		return paymentService.doPayment(payment);
 	}
-
+	
+	
 }

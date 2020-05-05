@@ -6,6 +6,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.spring.cloud.gateway.orderservice.common.Payment;
+import com.spring.cloud.gateway.orderservice.common.TransactionRequest;
+import com.spring.cloud.gateway.orderservice.common.TransactionResponse;
 import com.spring.cloud.gateway.orderservice.entity.Order;
 import com.spring.cloud.gateway.orderservice.service.OrderService;
 
@@ -18,8 +21,9 @@ public class OrderController {
 	
 	
 	@PostMapping("/bookorder")
-	public Order bookOrder(@RequestBody Order order)
+	public TransactionResponse bookOrder(@RequestBody TransactionRequest request)
 	{
-		return _orderService.saveOrder(order);
+		
+		return _orderService.saveOrder(request);
 	}
 }
