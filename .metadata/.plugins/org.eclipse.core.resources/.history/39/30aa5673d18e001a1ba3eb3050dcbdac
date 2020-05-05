@@ -1,0 +1,21 @@
+server:
+  port: 5151
+spring:  application:    name: ORDER-SERVICE
+  datasource:    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/orderdatabase
+    username: root
+    password: root
+  jpa:    show-sql: true
+    hibernate:      ddl-auto: update
+    properties:      dialect: org.hibernate.dialect.MySQL5Dialect
+      format:
+          sql: true
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
