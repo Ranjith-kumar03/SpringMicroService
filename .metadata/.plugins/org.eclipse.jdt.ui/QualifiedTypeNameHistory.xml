@@ -1,25 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="org.springframework.context.annotation.Profile"/>
-<fullyQualifiedTypeName name="org.springframework.cloud.config.server.EnableConfigServer"/>
-<fullyQualifiedTypeName name="org.springframework.cloud.context.config.annotation.RefreshScope"/>
-<fullyQualifiedTypeName name="org.springframework.cloud.stream.messaging.Source"/>
-<fullyQualifiedTypeName name="org.springframework.messaging.MessageChannel"/>
-<fullyQualifiedTypeName name="org.springframework.integration.support.MessageBuilder"/>
-<fullyQualifiedTypeName name="org.springframework.cloud.stream.annotation.EnableBinding"/>
-<fullyQualifiedTypeName name="org.springframework.cloud.stream.messaging.Sink"/>
-<fullyQualifiedTypeName name="org.jboss.logging.Logger"/>
-<fullyQualifiedTypeName name="com.sun.org.slf4j.internal.Logger"/>
-<fullyQualifiedTypeName name="java.lang.System.Logger"/>
 <fullyQualifiedTypeName name="org.springframework.cloud.stream.annotation.StreamListener"/>
-<fullyQualifiedTypeName name="org.springframework.cloud.client.loadbalancer.LoadBalanced"/>
 <fullyQualifiedTypeName name="org.springframework.cloud.netflix.ribbon.RibbonClient"/>
 <fullyQualifiedTypeName name="com.netflix.client.config.IClientConfig"/>
 <fullyQualifiedTypeName name="com.netflix.loadbalancer.IPing"/>
 <fullyQualifiedTypeName name="com.netflix.loadbalancer.PingUrl"/>
-<fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
 <fullyQualifiedTypeName name="com.netflix.loadbalancer.AvailabilityFilteringRule"/>
-<fullyQualifiedTypeName name="org.springframework.web.client.RestTemplate"/>
 <fullyQualifiedTypeName name="org.springframework.cloud.task.configuration.EnableTask"/>
 <fullyQualifiedTypeName name="org.springframework.boot.CommandLineRunner"/>
 <fullyQualifiedTypeName name="org.springframework.cloud.task.listener.TaskExecutionListener"/>
@@ -35,8 +21,6 @@
 <fullyQualifiedTypeName name="java.util.Random"/>
 <fullyQualifiedTypeName name="com.spring.cloud.task.service.PaymentService"/>
 <fullyQualifiedTypeName name="com.spring.cloud.task.entity.Payment"/>
-<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
-<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
 <fullyQualifiedTypeName name="org.springframework.boot.autoconfigure.domain.EntityScan"/>
 <fullyQualifiedTypeName name="javax.persistence.Entity"/>
 <fullyQualifiedTypeName name="com.spring.cloud.gateway.orderservice.repository.OrderRepository"/>
@@ -60,4 +44,20 @@
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
 <fullyQualifiedTypeName name="org.springframework.cloud.netflix.eureka.EnableEurekaClient"/>
 <fullyQualifiedTypeName name="org.springframework.cloud.netflix.eureka.server.EnableEurekaServer"/>
+<fullyQualifiedTypeName name="com.spring.cloud.gateway.orderservice.common.TransactionRequest"/>
+<fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
+<fullyQualifiedTypeName name="org.springframework.cloud.client.loadbalancer.LoadBalanced"/>
+<fullyQualifiedTypeName name="org.springframework.web.client.RestTemplate"/>
+<fullyQualifiedTypeName name="com.spring.cloud.gateway.orderservice.common.Payment"/>
+<fullyQualifiedTypeName name="com.spring.cloud.gateway.orderservice.repository.PaymentRepository"/>
+<fullyQualifiedTypeName name="java.net.URL"/>
+<fullyQualifiedTypeName name="java.net.URI"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
+<fullyQualifiedTypeName name="org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker"/>
+<fullyQualifiedTypeName name="org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard"/>
+<fullyQualifiedTypeName name="org.springframework.cloud.netflix.hystrix.EnableHystrix"/>
+<fullyQualifiedTypeName name="com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand"/>
+<fullyQualifiedTypeName name="com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty"/>
+<fullyQualifiedTypeName name="com.spring.cloud.gateway.orderservice.common.TransactionResponse"/>
 </qualifiedTypeNameHistroy>

@@ -4,10 +4,12 @@ import java.util.Random;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.stereotype.Service;
 
 import com.spring.cloud.gateway.paymentservice.entity.Payment;
 import com.spring.cloud.gateway.paymentservice.repository.PaymentRepository;
+
 
 @Service
 public class PaymentService {

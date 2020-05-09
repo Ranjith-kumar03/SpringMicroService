@@ -5,12 +5,14 @@ org.springframework.ide.eclipse.boot.wizard.PopularityTracker.cloud-config-serve
 org.springframework.ide.eclipse.boot.wizard.PopularityTracker.cloud-eureka=6
 org.springframework.ide.eclipse.boot.wizard.PopularityTracker.cloud-eureka-server=2
 org.springframework.ide.eclipse.boot.wizard.PopularityTracker.cloud-gateway=1
+org.springframework.ide.eclipse.boot.wizard.PopularityTracker.cloud-hystrix=1
+org.springframework.ide.eclipse.boot.wizard.PopularityTracker.cloud-hystrix-dashboard=1
 org.springframework.ide.eclipse.boot.wizard.PopularityTracker.cloud-ribbon=1
 org.springframework.ide.eclipse.boot.wizard.PopularityTracker.cloud-stream=2
 org.springframework.ide.eclipse.boot.wizard.PopularityTracker.cloud-task=1
 org.springframework.ide.eclipse.boot.wizard.PopularityTracker.data-jpa=4
 org.springframework.ide.eclipse.boot.wizard.PopularityTracker.data-mongodb=5
-org.springframework.ide.eclipse.boot.wizard.PopularityTracker.devtools=14
+org.springframework.ide.eclipse.boot.wizard.PopularityTracker.devtools=15
 org.springframework.ide.eclipse.boot.wizard.PopularityTracker.kafka=2
 org.springframework.ide.eclipse.boot.wizard.PopularityTracker.lombok=5
 org.springframework.ide.eclipse.boot.wizard.PopularityTracker.mysql=4

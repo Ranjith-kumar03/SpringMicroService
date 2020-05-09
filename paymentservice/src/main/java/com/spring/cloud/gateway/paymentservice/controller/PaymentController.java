@@ -30,6 +30,7 @@ public class PaymentController {
 	@GetMapping("/{orderid}")
 	public Payment findPaymentHistoryByOrderId(@PathVariable int orderid)
 	{
+		System.out.println("Iam trying to get the order out");
 		return paymentService.findPaymentHistoryByOrderId(orderid);
 	}
 	

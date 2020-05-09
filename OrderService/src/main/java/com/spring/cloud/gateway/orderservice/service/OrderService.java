@@ -4,6 +4,9 @@ import java.net.URI;
 import java.net.URL;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -16,17 +19,29 @@ import com.spring.cloud.gateway.orderservice.entity.Order;
 import com.spring.cloud.gateway.orderservice.repository.OrderRepository;
 import com.spring.cloud.gateway.orderservice.repository.PaymentRepository;
 
+
 @Service
+@RefreshScope
 public class OrderService {
+
+	
+	
+	  
+	  
+	
+	  @Value("${microservice.PAYMENT-SERVICE.endpoints.endpoint.uri}")
+	  public String ENDPOINT_URL;
+	 
 	
 	@Autowired
-	private RestTemplate restTemplate;
+	@Lazy
+	public RestTemplate restTemplate;
 	
 	@Autowired
-	private PaymentRepository paymentRepository;
+	public PaymentRepository paymentRepository;
 	
 	@Autowired
-	private OrderRepository _orderRepo;
+	public OrderRepository _orderRepo;
 	private String message="";
 	
 	
@@ -52,7 +67,7 @@ public class OrderService {
 		payment.setOrderid(order.getId());
 		payment.setAmount(order.getPrice());
 			
-			Payment paymentResponse = restTemplate.postForObject(url, payment, Payment.class);
+			Payment paymentResponse = restTemplate.postForObject(ENDPOINT_URL, payment, Payment.class);
 			paymentRepository.save(paymentResponse);
 			_orderRepo.save(order);
 			message=paymentResponse.getPaymentStatus().equals("sucess") ? "Transaction happend Sucessfully" : "Transaction Failed or declined";
@@ -62,7 +77,7 @@ public class OrderService {
 	
 	public TransactionResponse fallBackSaveMethod(TransactionRequest request)
 		{
-		
+		System.out.println("Please find the Link :"+ENDPOINT_URL);
 		Order order=new Order();
 		order.setId(0);
 		order.setName("");
